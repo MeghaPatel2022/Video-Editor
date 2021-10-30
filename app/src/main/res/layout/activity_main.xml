@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:src="@drawable/ic_favourite" />
+
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/top_navigation_constraint"
+            android:layout_below="@+id/rlTop" />
+
+        <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+            android:id="@+id/top_navigation_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_75sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background_color"
+            android:paddingVertical="12dp"
+            app:bnc_mode="spread">
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/tabMyVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_minus20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                app:bt_active="false"
+                app:bt_colorActive="@color/white"
+                app:bt_colorInactive="#C1C1C1"
+                app:bt_icon="@drawable/ic_my_videos"
+                app:bt_padding="@dimen/_7sdp"
+                app:bt_shape="@drawable/bottom_shap"
+                app:bt_title="My Videos"
+                app:bt_titlePadding="@dimen/_5sdp" />
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/tabSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_45sdp"
+                android:layout_marginRight="@dimen/_minus20sdp"
+                app:bt_active="false"
+                app:bt_colorActive="@color/white"
+                app:bt_colorInactive="#C1C1C1"
+                app:bt_icon="@drawable/ic_setting"
+                app:bt_padding="@dimen/_7sdp"
+                app:bt_shape="@drawable/bottom_shap"
+                app:bt_title="Settings"
+                app:bt_titlePadding="@dimen/_5sdp"
+                app:layout_constraintLeft_toRightOf="@+id/tabMyVideo" />
+
+            <!-- Add more child items here - max upto 5 -->
+
+        </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_add_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/top_navigation_constraint"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="@dimen/_25sdp"
+            android:src="@drawable/ic_add_video" />
+
+    </RelativeLayout>
+</layout>

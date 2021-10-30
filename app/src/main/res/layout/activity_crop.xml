@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        tools:context=".CropActivity">
+
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBack"
+                android:layout_width="?actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:padding="@dimen/_13sdp"
+                android:src="@drawable/ic_back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/crop"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCropView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llCrop"
+            android:layout_below="@+id/rlTop"
+            android:layout_marginBottom="@dimen/_5sdp">
+
+            <com.isseiaoki.simplecropview.CropImageView xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cropImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:padding="@dimen/_8sdp"
+                custom:scv_crop_mode="fit_image"
+                custom:scv_frame_color="@color/white"
+                custom:scv_frame_stroke_weight="1dp"
+                custom:scv_guide_show_mode="show_always"
+                custom:scv_guide_stroke_weight="1dp"
+                custom:scv_handle_color="@color/white"
+                custom:scv_handle_show_mode="show_always"
+                custom:scv_handle_size="10dp"
+                custom:scv_min_frame_size="50dp"
+                custom:scv_touch_padding="8dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llCrop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_above="@+id/imgDone"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgRotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_rotate" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_37sdp"
+                android:src="@drawable/ic_crop" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:src="@drawable/ic_done_new" />
+
+    </RelativeLayout>
+
+</layout>

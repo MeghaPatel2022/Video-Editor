@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Video Editor</string>
+    <string name="no_video_created">No Video Created!!</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+
+    <string name="vw_rationale_storage" translatable="false">Need Reading Storage Permission for Picking Files</string>
+    <string name="crop">Crop</string>
+</resources>

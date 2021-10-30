@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mImage"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="@drawable/image_background"
+            android:scaleType="centerCrop" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_deselect" />
+
+        <ImageView
+            android:id="@+id/mVid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="@drawable/ic_video"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</layout>
